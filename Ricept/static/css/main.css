@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,300,700);
+
+p {
+	word-wrap:break-word;
+}
+a{
+	color: black;
+}
+
+body {
+  
+  font-family: 'Lora', sans-serif !important;
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: #5A4181;
+}
+.page-item.active .page-link {
+    color: #000000;
+    background-color: #ffe083;
+    border-color: #ffe083;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+
