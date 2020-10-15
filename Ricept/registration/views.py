@@ -25,13 +25,21 @@ def register(request):
         else:
             messages.info(request, "Пароли не совпадают")
             return redirect("register")
-        print(username + " " + email)
     else:
-        users = User.objects.all()
-        for user in users:
-            print(user.username)
         return render(request, "registration/register.html")
 
 
 def login(request):
-    return HttpResponse("success")
+    if request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+        user = auth.authenticate(username=email,password=password)
+        print(user)
+        if user is not None:
+            auth.login(request,user)
+            return redirect("/")
+        else:
+            messages.info(request,"Введен неверный email или пароль")
+            return redirect("login")
+    else:
+        return render(request,"registration/login.html")
