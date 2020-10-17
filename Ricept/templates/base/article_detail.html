@@ -2,7 +2,12 @@
 {% block other %}
 <main role="main">
       <div class="container shadow-sm">
-    <h1 style="margin-top:0.4em">{{article.title}}</h1>
+    <p class="h1" style="margin-top:0.4em">{{article.title}}</p>
+    <label style="margin-left: 15px; color: #bfbfbf">{{article.creation_date|date:"d-m-Y"}}</label>
+
+    <input type="button" class="click" id="click" value="Click" style="width: 45px; height: 20px; text-align: center; color: white; background: #23b7e5; font-size: 13px; border-color: #23b7e5; border-radius:2px; padding: 0px; "> 
+
+    
     {{article.body|safe}}
   </div>
 

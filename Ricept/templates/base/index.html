@@ -36,7 +36,7 @@
 
         <form class="form-inline mt-2 mt-md-0">
           {% if user.is_authenticated %}
-          <span style="color: black; margin-right: 5px;" class="navbar-text">
+          <span style="color: black; margin-right: 15px;" class="navbar-text">
             {{ user.username }}
           </span>
           <a class="btn btn-warning" href="{% url 'logout' %}" role="button">Выйти</a>

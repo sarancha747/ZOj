@@ -4,9 +4,10 @@
     <list default="true" id="ffd41e80-52c9-43d1-9db0-750ca7f0ee3b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/Ricept/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/Ricept/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ricept/templates/base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
