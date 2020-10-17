@@ -1,13 +1,14 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
-    body = models.TextField(max_length=10000)
+    body = RichTextField(blank=True, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, editable=False)
     modified = models.DateTimeField(auto_now=True)
 
