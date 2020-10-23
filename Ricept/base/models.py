@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
@@ -11,6 +12,7 @@ class Article(models.Model):
     body = RichTextField(blank=True, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, editable=False)
     modified = models.DateTimeField(auto_now=True)
+    favorite = models.ManyToManyField(User)
 
 
     def __str__(self):
