@@ -7,7 +7,7 @@
       <change beforePath="$PROJECT_DIR$/Ricept/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ricept/templates/base/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/favorites.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,10 +164,11 @@
     </state>
     <state x="1710" y="151" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602499644958" />
     <state x="344" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602774204997" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1603451069278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="475" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1603650269605">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="475" y="243" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603650269605" />
     <state x="2034" y="347" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602773010979" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603451069278" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603533371790" />
   </component>
 </project>

@@ -8,7 +8,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,  related_name='%(class)s_requests_created')
     body = RichTextField(blank=True, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, editable=False)
     modified = models.DateTimeField(auto_now=True)

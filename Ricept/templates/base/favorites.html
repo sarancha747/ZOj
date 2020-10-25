@@ -1,15 +1,15 @@
 {% extends 'base/index.html' %}
 {% block other %}
 <main role="main">
- 
+ {% if user.is_authenticated %}
   {% for article in articles %}
     <div class="container shadow-sm">
-      <h1 style="margin-top:0.7em" class="text-justify"><a href="{% url 'art_detail' article.id %}"><u>{{article.title}}</u></a></h1>
-      <p>{{ article.body|truncatechars:1000 }}</p>
+      <p class="h1" style="margin-top:0.7em" class="text-justify"><a href="{% url 'art_detail' article.id %}">{{article.title}}</a></p>
+      <p>{{ article.body|truncatechars:1000|safe }}</p>
     </div>
     
   {% endfor %}
-
+{% if articles.has_other_pages %}
   <nav aria-label="...">
     <ul class="pagination justify-content-center">
       {% if articles.has_previous %}
@@ -31,7 +31,13 @@
       {% endif %}
     </ul>
   </nav>
+{% endif %}
 
+{% else %}
+    <div class="container ">
+      <p class="h1" style="margin-top:0.7em" class="text-justify"><u><a href="{% url 'login' %}">Войдите</a></u> или <u><a href="{% url 'register' %}">Зарегистрируйтесь</a></u> для  доступа к избранным</a></p>
+    </div>
+{% endif %}
 </main>
 
 {% endblock %}
