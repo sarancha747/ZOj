@@ -1,7 +1,20 @@
 {% extends 'base/index.html' %}
 {% block other %}
 <main role="main">
- 
+  <div class="container">
+    <form action="{% url 'start' %}" method="get">
+      <div class="row" style="margin-top:0.7em">
+        <div class="col-0 col-sm-0 col-md-7">  
+        </div>
+        <div class="col-8 col-sm-8 col-md-3" style="padding-right: 0px;">
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="search"> 
+        </div>
+        <div class="col-4 col-sm-4 col-md-2" style="padding-left: 10px;">
+            <button class="btn btn-info my-sm-0" type="submit" style="margin-top: 0px; margin-bottom: 0px;">Пошук</button>
+        </div>
+      </div>
+    </form>
+  </div>
   {% for article in articles %}
     <div class="container shadow-sm">
       <p class="h1" style="margin-top:0.7em"><a href="{% url 'art_detail' article.id %}">{{article.title}}</a></p>
@@ -14,7 +27,7 @@
     <ul class="pagination justify-content-center">
       {% if articles.has_previous %}
         <li class="page-item">
-          <a class="page-link" href="?page=1">В начало</a>
+          <a class="page-link" href="?page=1">На початок</a>
         </li>
         <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
       {% endif %}
@@ -26,7 +39,7 @@
       {% if articles.has_next %}
         <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number }}</a></li>
         <li class="page-item">
-          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В конец</a>
+          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
         </li>
       {% endif %}
     </ul>

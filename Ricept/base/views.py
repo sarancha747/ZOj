@@ -3,11 +3,17 @@ from django.http import HttpResponse
 from .models import Article
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User, auth
+from  django.db.models import Q
 
 
 # Create your views here.
 def start(request):
-    article = Article.objects.all()
+    serch_query = request.GET.get('search', '')
+    if serch_query:
+        article = Article.objects.filter(Q(title__icontains=serch_query) | Q(body__icontains=serch_query))
+    else:
+        article = Article.objects.all()
+
     paginator = Paginator(article, 10)  # Show 25 contacts per page.
 
     page_number = request.GET.get('page')
