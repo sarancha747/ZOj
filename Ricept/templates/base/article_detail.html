@@ -37,11 +37,12 @@
 			    	<div class="col-6 col-md-4">
 			    		<p  class="text-justify"><u><a href="{% url 'login' %}">Увійдіть</a></u>, або <u><a href="{% url 'register' %}">Зареєструйтеся</a></u> для доступу до обраних статей.</a></p>
 			    	</div>
-		    	</div>
+		    </div>
 			{% endif %}
 		
-	    
+	    <div style="margin-top: 15px">
 	    {{article.body|safe}}
+	    </div>
 	</div>
 
 </main>

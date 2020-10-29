@@ -3,20 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ffd41e80-52c9-43d1-9db0-750ca7f0ee3b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0002_auto_20201002_1812.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0003_auto_20201002_1817.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0004_auto_20201016_1501.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0005_article_favorite.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/base/migrations/0006_auto_20201025_2300.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ricept/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/article_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/templates/base/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/favorites.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ricept/templates/base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ricept/templates/base/start_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,11 +215,11 @@
     </state>
     <state x="1710" y="151" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1602499644958" />
     <state x="344" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602774204997" />
-    <state x="2034" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1603920208198">
+    <state x="2034" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1603970388179">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="475" y="243" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1603650269605" />
-    <state x="2034" y="347" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603920208198" />
+    <state x="2034" y="347" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603970388179" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603533371790" />
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603707366834">
       <screen x="1366" y="0" width="1920" height="1040" />

@@ -25,6 +25,7 @@ class Article(models.Model):
     html_title = models.CharField(max_length=200)
     keyword = models.CharField(max_length=200)
     description = models.CharField(max_length=150)
+    html_description = models.CharField(max_length=150)
     body = RichTextField(blank=True, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, editable=False)
     modified = models.DateTimeField(auto_now=True)

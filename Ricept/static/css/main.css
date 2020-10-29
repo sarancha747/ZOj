@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,300,700);
-
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,300,700);
 p {
 	word-wrap:break-word;
 }
@@ -10,6 +10,9 @@ a{
 body {
   
   font-family: 'Lora', sans-serif !important;
+}
+.open_sa_f{
+font-family: 'Montserrat Alternates', sans-serif !important;
 }
 .pagination > li > a
 {
@@ -40,5 +43,9 @@ body {
 	background-color: #c2ssff;
 }
 
-
-
+.text-primary {
+    color: #8465c2!important;
+}
+.text-success {
+    color: #ff000a!important;
+}

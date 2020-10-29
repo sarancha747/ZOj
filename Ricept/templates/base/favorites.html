@@ -4,7 +4,7 @@
  {% if user.is_authenticated %}
   {% for article in articles %}
     <div class="container shadow-sm">
-      <p class="h1" style="margin-top:0.7em" class="text-justify"><a href="{% url 'art_detail' article.id %}">{{article.title}}</a></p>
+      <p class="h1" style="margin-top:0.7em" class="text-justify"><a href="{% url 'art_detail' article.slug %}">{{article.title}}</a></p>
       <p>{{ article.body|truncatechars:1000|safe }}</p>
     </div>
     
