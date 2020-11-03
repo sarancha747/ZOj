@@ -1,0 +1,68 @@
+{% extends 'base/index.html' %}
+{% block title %}
+  <title></title>
+{% endblock %}
+{% block other %}
+
+<main role="main">
+ <div class="container mb-4">
+    <form action="{% url 'science' %}" method="get">
+      <div class="row" style="margin-top:0.7em">
+        <div class="col-0 col-sm-0 col-md-7">  
+        </div>
+        <div class="col-8 col-sm-8 col-md-3" style="padding-right: 0px;">
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="search"> 
+        </div>
+        <div class="col-4 col-sm-4 col-md-2" style="padding-left: 10px;">
+            <button class="btn btn-info my-sm-0" type="submit" style="margin-top: 0px; margin-bottom: 0px;">Пошук</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  {% for article in articles %}
+    <div class="container">
+      	<div class="row mb-2">
+	      <div class="col-md-12">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-2 text-primary">Наука</strong>
+	          <p class="mb-0 h3"><b>{{article.title}}</b></p>
+	          <div class="mb-1 text-muted">{{article.creation_date|date:"d-m-Y"}}</div>
+	          <p class="card-text mb-auto">{{article.description}}</p>
+	          <a href="{% url 'art_detail' article.slug %}" class="stretched-link">Продовжити читати</a>
+	        </div>
+	      </div>
+	    </div>
+	</div>
+    </div>
+       
+
+
+  {% endfor %}
+
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center">
+      {% if articles.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page=1">На початок</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
+      {% endif %}
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">
+          {{ articles.number }}
+        </span>
+      </li>
+      {% if articles.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number }}</a></li>
+        <li class="page-item">
+          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+</main>
+
+{% endblock %}

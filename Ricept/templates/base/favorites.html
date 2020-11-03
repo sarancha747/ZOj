@@ -1,13 +1,32 @@
 {% extends 'base/index.html' %}
+{% block title %}
+  <title></title>
+{% endblock %}
 {% block other %}
 <main role="main">
  {% if user.is_authenticated %}
+ <div class="mb-4"></div>
   {% for article in articles %}
-    <div class="container shadow-sm">
-      <p class="h1" style="margin-top:0.7em" class="text-justify"><a href="{% url 'art_detail' article.slug %}">{{article.title}}</a></p>
-      <p>{{ article.body|truncatechars:1000|safe }}</p>
+    <div class="container">
+        <div class="row mb-2">
+        <div class="col-md-12">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            {% if article.section|stringformat:'s'  == science|stringformat:'s'  %}
+              <strong class="d-inline-block mb-2 text-primary">Наука</strong>
+            {% endif %}
+            {% if article.section|stringformat:'s'  == technology|stringformat:'s'  %}
+              <strong class="d-inline-block mb-2 text-success">Технології</strong>
+            {% endif %}
+            <p class="mb-0 h3"><b>{{article.title}}</b></p>
+            <div class="mb-1 text-muted">{{article.creation_date|date:"d-m-Y"}}</div>
+            <p class="card-text mb-auto">{{article.description}}</p>
+            <a href="{% url 'art_detail' article.slug %}" class="stretched-link">Продовжити читати</a>
+          </div>
+        </div>
+      </div>
+  </div>
     </div>
-    
   {% endfor %}
 {% if articles.has_other_pages %}
   <nav aria-label="...">

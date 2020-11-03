@@ -1,26 +1,15 @@
 {% extends 'base/index.html' %}
+{% block title %}
+  <title>Document</title>
+{% endblock %}
 {% block other %}
 {% load static %}
-<main role="main">
-  <div class="container">
-    <form action="{% url 'start' %}" method="get">
-      <div class="row" style="margin-top:0.7em">
-        <div class="col-0 col-sm-0 col-md-7">  
-        </div>
-        <div class="col-8 col-sm-8 col-md-3" style="padding-right: 0px;">
-            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="search"> 
-        </div>
-        <div class="col-4 col-sm-4 col-md-2" style="padding-left: 10px;">
-            <button class="btn btn-info my-sm-0" type="submit" style="margin-top: 0px; margin-bottom: 0px;">Пошук</button>
-        </div>
-      </div>
-    </form>
-  </div>
+
 
   <div class="container">
-    <div class="row mb-2">
+    <div class="row mb-2 mt-3">
       <div class="col-4 col-md-2">
-        <img style="height:100%;  width:100%" src="{% static '/images/science.jpg' %}" alt="альтернативный текст">
+        <img style="height:100%;  width:100%" src="{% static '/images/science2.png' %}" alt="Зображення символізуюче науку">
       </div>
       <div class="col-8 col-md-10">
         <h1 class="pb-4 mb-4 font-italic border-bottom open_sa_f">
@@ -33,10 +22,10 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Наука</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{sci_article.0.title}}</b></p>
+          <div class="mb-1 text-muted">{{sci_article.0.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ sci_article.0.description}}</p>
+          <a href="{% url 'art_detail' sci_article.0.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
@@ -46,10 +35,10 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Наука</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{sci_article.1.title}}</b></p>
+          <div class="mb-1 text-muted">{{sci_article.1.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ sci_article.1.description}}</p>
+          <a href="{% url 'art_detail' sci_article.1.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
@@ -57,21 +46,21 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Наука</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{sci_article.2.title}}</b></p>
+          <div class="mb-1 text-muted">{{sci_article.2.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ sci_article.2.description}}</p>
+          <a href="{% url 'art_detail' sci_article.2.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
   </div>
-  <h4 style="text-align: center;"><a href="" style="color:#8465c2;">всі статті про науку...</a></h4>
+  <h4 style="text-align: center;"><a href="{% url 'science' %}" class="text-primary">всі статті про науку...</a></h4>
   </div>
 
-    <div class="container">
+    <div class="container mb-4">
     <div class="row mb-2">
       <div class="col-4 col-md-2">
-        <img style="height:100%;  width:100%" src="{% static '/images/technology.jpg' %}" alt="альтернативный текст">
+        <img style="height:100%;  width:100%" src="{% static '/images/technology2.png' %}" alt="Зображення символізуюче технології">
       </div>
       <div class="col-8 col-md-10">
         <h1 class="pb-4 mb-4 font-italic border-bottom open_sa_f">
@@ -84,10 +73,10 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success">Технології</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{tech_article.0.title}}</b></p>
+          <div class="mb-1 text-muted">{{tech_article.0.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ tech_article.0.description}}</p>
+          <a href="{% url 'art_detail' tech_article.0.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
@@ -97,10 +86,10 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success">Технології</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{tech_article.1.title}}</b></p>
+          <div class="mb-1 text-muted">{{tech_article.1.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ tech_article.1.description}}</p>
+          <a href="{% url 'art_detail' tech_article.1.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
@@ -108,49 +97,21 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success">Технології</strong>
-          <p class="mb-0 h3"><b>{{articles.0.title}}</b></p>
-          <div class="mb-1 text-muted">{{articles.0.creation_date|date:"d-m-Y"}}</div>
-          <p class="card-text mb-auto">{{ articles.0.description}}</p>
-          <a href="#" class="stretched-link">Продовжити читати</a>
+          <p class="mb-0 h3"><b>{{tech_article.2.title}}</b></p>
+          <div class="mb-1 text-muted">{{tech_article.2.creation_date|date:"d-m-Y"}}</div>
+          <p class="card-text mb-auto">{{ tech_article.2.description}}</p>
+          <a href="{% url 'art_detail' tech_article.2.slug %}" class="stretched-link">Продовжити читати</a>
         </div>
       </div>
     </div>
   </div>
-  <h4 style="text-align: center;"><a href="" style="color:#ff000a;">всі статті про технології...</a></h4>
+  <h4 style="text-align: center;"><a href="{% url 'technology' %}" class="text-success">всі статті про технології...</a></h4>
   </div>
 
 
 
 
-  {% for article in articles %}
-    <div class="container shadow-sm">
-      <p class="h1" style="margin-top:0.7em"><a href="{% url 'art_detail' article.slug %}">{{article.title}}</a></p>
-      <p>{{ article.body|truncatechars:1000|safe }}</p>
-    </div>
-    
-  {% endfor %}
 
-  <nav aria-label="...">
-    <ul class="pagination justify-content-center">
-      {% if articles.has_previous %}
-        <li class="page-item">
-          <a class="page-link" href="?page=1">На початок</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
-      {% endif %}
-      <li class="page-item active" aria-current="page">
-        <span class="page-link">
-          {{ articles.number }}
-        </span>
-      </li>
-      {% if articles.has_next %}
-        <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number }}</a></li>
-        <li class="page-item">
-          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
-        </li>
-      {% endif %}
-    </ul>
-  </nav>
 
 </main>
 
