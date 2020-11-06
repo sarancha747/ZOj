@@ -21,43 +21,43 @@ pswd.onkeyup = function() {
   if(pswd.value.match(numbers)) {  
     number.setAttribute("style","color: green;")
     b_number = true;
-    number.innerText = "✔Как минимум 1 цифра";
+    number.innerText = "✔Як мінімум 1 цифра";
   } else {
     number.setAttribute("style","color: red;")
     b_number = false;
-    number.innerText = "✖Как минимум 1 цифра";
+    number.innerText = "✖Як мінімум 1 цифра";
   }
 
   var upperCaseLetters = /[A-Z]/g;
   if(pswd.value.match(upperCaseLetters)) {  
     capital.setAttribute("style","color: green;")
     b_capital = true;
-    capital.innerText = "✔Как минимум 1 буква в верхнем регистре";
+    capital.innerText = "✔Як мінімум 1 буква у верхньому регістрі";
   } else {
     capital.setAttribute("style","color: red;")
     b_capital = false;
-    capital.innerText = "✖Как минимум 1 буква в верхнем регистре";
+    capital.innerText = "✖Як мінімум 1 буква у верхньому регістрі";
   }
   
   // Validate length
   if(pswd.value.length >= 8) {
     length.setAttribute("style","color: green;")
     b_length = true;
-    length.innerText = "✔Минимальная длина пароля 8 символов";
+    length.innerText = "✔Мінімальна довжина пароля 8 символів";
   } else {
     length.setAttribute("style","color: red;")
     b_length = false;
-    length.innerText = "✖Минимальная длина пароля 8 символов";
+    length.innerText = "✖Мінімальна довжина пароля 8 символів";
   }
 
   if(pswd.value === pswd_conf.value){
   	equal.setAttribute("style","color: green;")
   	b_equal = true;
-  	equal.innerText = "✔Пароли совпадают";
+  	equal.innerText = "✔Паролі збігаються";
   }else{
   	equal.setAttribute("style","color: red;")
   	b_equal = false;
-  	equal.innerText = "✖Пароли совпадают";
+  	equal.innerText = "✖Паролі збігаються";
   }
 
   if(b_number == true &&  b_length == true && b_equal == true && b_capital == true){
@@ -71,11 +71,11 @@ pswd_conf.onkeyup = function() {
   if(pswd.value === pswd_conf.value){
   	equal.setAttribute("style","color: green;")
   	b_equal = true;
-  	equal.innerText = "✔Пароли совпадают";
+  	equal.innerText = "✔Паролі збігаються";
   }else{
   	equal.setAttribute("style","color: red;")
   	b_equal = false;
-  	equal.innerText = "✖Пароли совпадают";
+  	equal.innerText = "✖Паролі збігаються";
   }
 
   if(b_number == true &&  b_length == true && b_equal == true && b_capital == true){

@@ -10,7 +10,7 @@ from django.db.models import Q
 def start(request):
     tech_article = Article.objects.filter(section__name__contains='Technology').order_by('-creation_date')[:3]
     sci_article = Article.objects.filter(section__name__contains='Science').order_by('-creation_date')[:3]
-    return render(request, 'base/start_page.html', {'tech_article': tech_article, 'sci_article':sci_article})
+    return render(request, 'base/start_page.html', {'tech_article': tech_article, 'sci_article': sci_article})
 
 
 def art_detail(request, slug):
@@ -45,12 +45,11 @@ def favorites(request):
 def science(request):
     search_query = request.GET.get('search', '')
     if search_query:
-        article = Article.objects.filter((Q(title__icontains=search_query) | Q(body__icontains=search_query)) & Q(section__name__contains='Science')).order_by('-creation_date')
+        article = Article.objects.filter((Q(title__icontains=search_query) | Q(body__icontains=search_query)) & Q(
+            section__name__contains='Science')).order_by('-creation_date')
     else:
         article = Article.objects.filter(section__name__contains='Science').order_by('-creation_date')
-
     paginator = Paginator(article, 20)  # Show 25 contacts per page.
-
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     print(article)
@@ -60,13 +59,16 @@ def science(request):
 def technology(request):
     search_query = request.GET.get('search', '')
     if search_query:
-        article = Article.objects.filter((Q(title__icontains=search_query) | Q(body__icontains=search_query)) & Q(section__name__contains='Technology')).order_by('-creation_date')
+        article = Article.objects.filter((Q(title__icontains=search_query) | Q(body__icontains=search_query)) & Q(
+            section__name__contains='Technology')).order_by('-creation_date')
     else:
         article = Article.objects.filter(section__name__contains='Technology').order_by('-creation_date')
-
     paginator = Paginator(article, 20)  # Show 25 contacts per page.
-
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     print(article)
     return render(request, 'base/technology.html', {'articles': page_obj})
+
+
+def robots(request):
+    return render(request, 'base/robots.txt')

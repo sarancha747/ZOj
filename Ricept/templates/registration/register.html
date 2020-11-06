@@ -1,6 +1,7 @@
 {% extends 'base/index.html' %}
 {% block title %}
   <title></title>
+  <meta name="description" content="">
 {% endblock %}
 {% block other %}
 <main>
@@ -14,23 +15,23 @@
 		<form method="post">	
 			{% csrf_token %}
 			<div class="form-group">    			
-				<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Псевдоним">
+				<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Ім'я користувача">
 			</div>
 			<div class="form-group">
-				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email адрес">	
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email адреса">	
 			</div>	
 			<div class="form-group">
-				<p id="length" style="color: red;">✖Минимальная длина пароля 8 символов</p>
-				<p id="number" style="color: red;">✖Как минимум 1 цифра</p>
-				<p id="capital" style="color: red;">✖Как минимум 1 буква в верхнем регистре</p>
-				<p id="equal"  style="color: red;">✖Пароли совпадают</p>
+				<p id="length" style="color: red;">✖Мінімальна довжина пароля 8 символів</p>
+				<p id="number" style="color: red;">✖Як мінімум 1 цифра</p>
+				<p id="capital" style="color: red;">✖Як мінімум 1 буква у верхньому регістрі</p>
+				<p id="equal"  style="color: red;">✖Паролі збігаються</p>
 				<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Пароль">
 			</div>
 			<div class="form-group">
-				<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Введите пароль еще раз">	    			
+				<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Повторіть пароль">	    			
 			</div>
 			<div class="form-group">
-				<input type="submit" id="sub_btn" disabled value="Регистрация" class="btn btn-warning btn-block">   		
+				<input type="submit" id="sub_btn" disabled value="Реєстрація" class="btn btn-warning btn-block">   		
 			</div>
 		</form>
 		

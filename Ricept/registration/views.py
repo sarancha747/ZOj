@@ -13,17 +13,17 @@ def register(request):
         password_confirmation = request.POST['password_confirmation']
         if password == password_confirmation and password != "":
             if User.objects.filter(username=username).exists() or username == "":
-                messages.info(request, "Псевдоним занят")
+                messages.info(request, "Ім'я користувача зайняте")
                 return redirect("register")
             elif User.objects.filter(email=email).exists():
-                messages.info(request, "Email неверно указан или уже зарегистрирован")
+                messages.info(request, "Email вказано невірно, або вже зареєстровано")
                 return redirect("register")
             else:
                 user = User.objects.create_user(username=username, password = password, email=email,first_name=username,last_name=username )
                 user.save();
-                return redirect("/")
+                return redirect("login")
         else:
-            messages.info(request, "Пароли не совпадают")
+            messages.info(request, "Паролі не збігаються")
             return redirect("register")
     else:
         return render(request, "registration/register.html")
@@ -39,7 +39,7 @@ def login(request):
             auth.login(request,user)
             return redirect("/")
         else:
-            messages.info(request,"Введен неверный email или пароль")
+            messages.info(request,"Введено невірний email або пароль")
             return redirect("login")
     else:
         return render(request,"registration/login.html")
