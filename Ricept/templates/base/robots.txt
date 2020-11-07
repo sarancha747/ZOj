@@ -1,1 +1,8 @@
-ukyku
+User-agent: *
+
+Disallow: /admin/
+Disallow: /?search=*
+Disallow: /reset_password*
+
+Host: https://uascience.net
+Sitemap: https://uascience.net/sitemap.xml
