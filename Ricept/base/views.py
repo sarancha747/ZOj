@@ -71,4 +71,4 @@ def technology(request):
 
 
 def robots(request):
-    return render(request, 'base/robots.txt')
+    return render(request, 'base/robots.txt', content_type="text/plain")
