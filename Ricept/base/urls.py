@@ -7,5 +7,6 @@ urlpatterns = [
     path('favorites/', views.favorites, name='favorites'),
     path('science/', views.science, name='science'),
     path('technology/', views.technology, name='technology'),
-    path('robots.txt', views.robots, name='robots')
+    path('robots.txt', views.robots, name='robots'),
+    path('sitemap.xml', views.sitemap, name='sitemap')
 ]

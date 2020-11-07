@@ -72,3 +72,7 @@ def technology(request):
 
 def robots(request):
     return render(request, 'base/robots.txt', content_type="text/plain")
+
+
+def sitemap(request):
+    return render(request, 'base/sitemap.xml', content_type="text/XML")
