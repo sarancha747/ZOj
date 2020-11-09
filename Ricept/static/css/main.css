@@ -49,3 +49,6 @@ font-family: 'Montserrat Alternates', sans-serif !important;
 .text-success {
     color: #FF758D!important;
 }
+.text-adjust{
+	word-wrap: break-word;
+}

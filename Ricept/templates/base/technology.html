@@ -27,9 +27,9 @@
       	<div class="row mb-2">
 	      <div class="col-md-12">
 	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-	        <div class="col p-4 d-flex flex-column position-static">
+	        <div class="col p-4 d-flex flex-column position-static text-adjust">
 	          <strong class="d-inline-block mb-2 text-success">Технології</strong>
-	          <p class="mb-0 h3"><b>{{article.title}}</b></p>
+	          <h3 class="mb-0"><b>{{article.title}}</b></h3>
 	          <div class="mb-1 text-muted">{{article.creation_date|date:"d-m-Y"}}</div>
 	          <p class="card-text mb-auto">{{article.description}}</p>
 	          <a href="{% url 'art_detail' article.slug %}" class="stretched-link">Продовжити читати</a>

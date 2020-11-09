@@ -7,7 +7,7 @@
 {% block other %}
 <main role="main">
 	<div class="container shadow-sm">
-	    <p class="h1" style="margin-top:0.4em">{{article.title}}</p>
+	    <h1 style="margin-top:0.4em"><b>{{article.title}}</b></h1>
 	    	{% if user.is_authenticated %}
 		    {% if in_favorite %}
 		    <form method="post">
@@ -45,7 +45,7 @@
 		    </div>
 			{% endif %}
 		
-	    <div style="margin-top: 15px">
+	    <div style="margin-top: 15px" class="text-adjust">
 	    {{article.body|safe}}
 	    </div>
 	</div>
