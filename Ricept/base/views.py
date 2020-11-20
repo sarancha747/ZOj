@@ -33,7 +33,7 @@ def art_detail(request, slug):
 
 def favorites(request):
     user = auth.get_user(request)
-    fav = Article.objects.filter(favorite__pk=user.pk)
+    fav = Article.objects.filter(favorite__pk=user.pk).order_by('-creation_date')
     paginator = Paginator(fav, 20)  # Show 25 contacts per page.
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
