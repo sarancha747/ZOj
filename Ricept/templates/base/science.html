@@ -15,7 +15,7 @@
             <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="search"> 
         </div>
         <div class="col-4 col-sm-4 col-md-2" style="padding-left: 10px;">
-            <button class="btn btn-info my-sm-0" type="submit" style="margin-top: 0px; margin-bottom: 0px;">Пошук</button>
+            <button class="btn btn-info my-sm-0 open_sa_f" type="submit" style="margin-top: 0px; margin-bottom: 0px; background-color: #54A9CC border-color: #54A9CC">Пошук</button>
         </div>
       </div>
     </form>
@@ -47,19 +47,19 @@
     <ul class="pagination justify-content-center">
       {% if articles.has_previous %}
         <li class="page-item">
-          <a class="page-link" href="?page=1">На початок</a>
+          <a class="page-link open_sa_f" href="?page=1">На початок</a>
         </li>
-        <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
+        <li class="page-item"><a class="page-link open_sa_f" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
       {% endif %}
       <li class="page-item active" aria-current="page">
-        <span class="page-link">
+        <span class="page-link open_sa_f">
           {{ articles.number }}
         </span>
       </li>
       {% if articles.has_next %}
-        <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number }}</a></li>
+        <li class="page-item"><a class="page-link open_sa_f" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number }}</a></li>
         <li class="page-item">
-          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
+          <a class="page-link open_sa_f" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
         </li>
       {% endif %}
     </ul>

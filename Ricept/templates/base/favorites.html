@@ -34,19 +34,19 @@
     <ul class="pagination justify-content-center">
       {% if articles.has_previous %}
         <li class="page-item">
-          <a class="page-link" href="?page=1">На початок</a>
+          <a class="page-link open_sa_f" href="?page=1">На початок</a>
         </li>
-        <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
+        <li class="page-item"><a class="page-link open_sa_f" href="?page={{ articles.previous_page_number }}">{{articles.previous_page_number}}</a></li>
       {% endif %}
       <li class="page-item active" aria-current="page">
-        <span class="page-link">
+        <span class="page-link open_sa_f">
           {{ articles.number }}
         </span>
       </li>
       {% if articles.has_next %}
-        <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number}}</a></li>
+        <li class="page-item"><a class="page-link open_sa_f" href="?page={{ articles.next_page_number }}">{{ articles.next_page_number}}</a></li>
         <li class="page-item">
-          <a class="page-link" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
+          <a class="page-link open_sa_f" href="?page={{ articles.paginator.num_pages }}">В кінець</a>
         </li>
       {% endif %}
     </ul>

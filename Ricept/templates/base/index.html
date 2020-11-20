@@ -29,13 +29,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'science' %}">Наука</a>
+            <a class="nav-link open_sa_f" href="{% url 'science' %}">Наука</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'technology' %}">Технології</a>
+            <a class="nav-link open_sa_f" href="{% url 'technology' %}">Технології</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'favorites' %}">Обрані</a> </li>
+            <a class="nav-link open_sa_f" href="{% url 'favorites' %}">Обрані</a> </li>
         </ul>
 
         <form class="form-inline mt-2 mt-md-0">
@@ -43,10 +43,10 @@
           <span style="color: black; margin-right: 15px;" class="navbar-text">
             {{ user.username }}
           </span>
-          <a class="btn btn-warning" href="{% url 'logout' %}" role="button">Вийти</a>
+          <a class="btn btn-warning open_sa_f" href="{% url 'logout' %}" role="button">Вийти</a>
           {% else %}
-          <a class="btn btn-warning" href="{% url 'register' %}" role="button">Зареєструватися</a>
-          <a class="btn btn-warning ml-2" href="{% url 'login' %}" role="button">Увійти</a>
+          <a class="btn btn-warning open_sa_f" href="{% url 'register' %}" role="button">Зареєструватися</a>
+          <a class="btn btn-warning ml-2 open_sa_f" href="{% url 'login' %}" role="button">Увійти</a>
           {% endif %}
         </form>
       </div>
